@@ -1,0 +1,34 @@
+@import "../theme/colours";
+
+.Task {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: stretch;
+
+    background-color: #2a2d45;
+    border-radius: 10px;
+    color: white;
+
+    margin-bottom: 50px;
+    box-shadow: 8px 11px 9px 1px rgba(0,0,0,0.39);
+
+    .Header {
+        margin: 0;
+        padding: 10px;
+        background-color: #4f566b;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .Footer {
+        border-radius: 0 0 10px 10px;
+    }
+
+    .Buttons {
+        display: flex;
+        padding: 5px 10px;
+        background-color: #4f566b;
+        justify-content: flex-end;
+    }
+}

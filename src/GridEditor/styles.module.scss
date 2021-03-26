@@ -1,0 +1,38 @@
+@import "../theme/colours";
+
+$cell-background-colour: $background-primary;
+
+.Grid {
+    display: grid;
+    gap: 1px 1px;
+    grid-template-columns: repeat(12, 1fr);
+
+    height: 125px;
+    background-color: black;
+    border: 1px solid black;
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.55);
+    margin: 20px;
+
+    .Cell {
+        background-color: $cell-background-colour;
+        padding: 10px;
+
+        &:hover {
+            background-color: lighten($cell-background-colour, 5%)
+        }
+    }
+
+    .Header {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-content: stretch;
+        align-items: flex-start;
+
+        .DeleteIcon {
+            user-select: none;
+            cursor: pointer;
+        }
+    }
+}
