@@ -8,6 +8,8 @@ type ReturnType = [
     (config: ColumnConfig) => void,
     // Delete column at index
     (n: number) => void,
+    // Set entire new configuration
+    (configs: ColumnConfig[]) => void,
 ];
 
 function useColumnConfiguration(initialConfiguration: ColumnConfig[]): ReturnType {
@@ -51,6 +53,7 @@ function useColumnConfiguration(initialConfiguration: ColumnConfig[]): ReturnTyp
         columns,
         onSaveNewColumn,
         onDeleteColumn,
+        setColumns,
     ];
 }
 

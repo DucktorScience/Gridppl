@@ -16,10 +16,9 @@ const INITIAL_CONFIGURATION: ColumnConfig[] = [
 
 const TaskTwo = () => {
     const limit = 12;
-    const [columns, onSaveNewColumn, onDeleteColumn] =  useColumnConfiguration(INITIAL_CONFIGURATION);
+    const [columns, onSaveNewColumn, onDeleteColumn, setEntireConfiguration] =  useColumnConfiguration(INITIAL_CONFIGURATION);
     const [textAreaValue, setTextAreaValue, onTextAreaValueChange] = useInput("");
     const [errorMessage, setErrorMessage] = useState("");
-
 
     const onExport = (e: React.SyntheticEvent) => {
         e.preventDefault();
@@ -36,6 +35,7 @@ const TaskTwo = () => {
         if (typeof newConfigurationOrError === "string") {
             setErrorMessage(newConfigurationOrError);
         } else {
+            setEntireConfiguration(newConfigurationOrError);
             setTextAreaValue("");
         }
     };
