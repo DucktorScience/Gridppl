@@ -9,6 +9,7 @@ type Props = {
 }
 
 const GridEditor = ({columns, deleteColumn}: Props) => {
+    // Configure the actual css grid with the configuration we want
     const templateColumns = useMemo(() => {
         return columns
             .map(({ width }) => `${width}fr`)
