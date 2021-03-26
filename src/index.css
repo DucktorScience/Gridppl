@@ -1,6 +1,9 @@
 body {
+  margin: 0;
+  padding: 0;
   color: #4d4d4d;
   font-family: 'Source Sans Pro', sans-serif;
 
+  color: white;
   background-color: rgba(238, 240, 247, 1);
 }

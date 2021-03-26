@@ -1,13 +1,18 @@
 import './App.scss';
+import NavBar from './NavBar';
 import TaskOne from './tasks/TaskOne';
 import TaskTwo from './tasks/TaskTwo';
 
 function App() {
     return (
-        <div className="App">
-            <TaskOne />
-            <TaskTwo />
-        </div>
+        <>
+
+            <NavBar />
+            <div className="App">
+                <TaskOne />
+                <TaskTwo />
+            </div>
+        </>
     );
 }
 
